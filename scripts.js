@@ -1,7 +1,7 @@
 function verificar(){
     let notatxt = document.getElementById("notatxt")
     let res = document.getElementById("result")
-    let nota = Number(notatxt.value)
+    let nota = Number(notatxt.value)    
     let notaResult = '' 
 
     if (nota >= 0 && nota <= 60){
@@ -15,9 +15,9 @@ function verificar(){
     }else if(nota > 89 && nota <= 100){
         notaResult = 'A'
     }else{
-        window.alert(`Nota inválida, selecione a nota corretamente...`)
+        window.alert(`Nota inválida, selecione uma nota entre 0 e 100.`)
+        res.innerHTML = ''
     }
-
     res.innerHTML  = `<p>A nota do aluno(a) foi: ${notaResult}</p>`
 }
 
